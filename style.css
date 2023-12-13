@@ -1,0 +1,32 @@
+.nav-item > a:hover, .nav-item > a:active{
+    color: #ffffff;
+}
+body{
+    background: linear-gradient(to bottom right, #000000, #111111, #222222, #333333, #444444); background-repeat: no-repeat;
+    height: 100vh;
+    margin: auto;
+}
+#outermost{
+  border-radius: 100%;
+}
+#middle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(#e8e8e8, #444333);
+  padding: 25px;
+  height: 220px;
+  width: 220px;
+  border-radius: 16% 41% 42% 32% / 18% 32% 22% 32%;
+  padding: 20px;
+}
+#innermost {
+  height: 200px;
+  width: 200px;
+  border-radius: 16% 41% 42% 32% / 18% 32% 22% 32%;
+  background: radial-gradient( #f9f9d7, #111111);
+}
+#innermost >div {
+  border-radius: 16% 41% 42% 32% / 18% 32% 22% 32%;
+  overflow: hidden;
+}
