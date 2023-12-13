@@ -1,10 +1,16 @@
-.nav-item > a:hover, .nav-item > a:active{
-    color: #ffffff;
-}
 body{
     background: linear-gradient(to bottom right, #000000, #111111, #222222, #333333, #444444); background-repeat: no-repeat;
     height: 100vh;
     margin: auto;
+}
+#navbar{
+  max-height: 50px;
+  max-width: 400px; background: linear-gradient(to bottom right,  #333333, #444444);
+  border-end-start-radius:30px;
+  border-start-end-radius: 30px;
+}
+.nav-item > a:hover, .nav-item > a:active{
+    color: #ffffff;
 }
 #outermost{
   border-radius: 100%;
