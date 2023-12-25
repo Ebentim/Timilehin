@@ -9,9 +9,6 @@ document.getElementById("navbar").innerHTML = `
   <li class="nav-item" id="projects">
     <a href="projects.html" class="nav-link">Projects</a>
   </li>
-  <li class="nav-item" id="experiences">
-    <a href="experiences.html" class="nav-link">Experiences</a>
-  </li>
   <li class="nav-item" id="resume" >
     <a href="resume.html" class="nav-link">Resume</a>
   </li>
