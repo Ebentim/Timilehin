@@ -6,6 +6,8 @@ const body = document.querySelector("body");
 const main = document.querySelector("main");
 const navItems = document.querySelector("ul");
 const navLinks = document.querySelectorAll(".nav-link")
+const skillItem = document.querySelectorAll(".skill-item")
+const footer = document.querySelector("footer");
 
 const darkMode = {
   darkIconDisplay: "none",
@@ -30,7 +32,12 @@ dark.addEventListener("click",()=>{
   const navLinksItems= Array.from(navLinks).slice(0, navLinks.length);
   navLinksItems.forEach(links =>{
     links.style.color = darkMode.color
-  })
+  });
+  const skillitems = Array.from(skillItem).slice(0, skillItem.length);
+  skillitems.forEach(item =>{
+    item.style.background = darkMode.background;
+    item.style.color = darkMode.color;
+  });
 })
 light.addEventListener("click",()=>{
   light.style.display = lightMode.lightIconDisplay;
@@ -42,6 +49,12 @@ light.addEventListener("click",()=>{
   navLinksItems.forEach(links => {
     links.style.color = lightMode.color;
   });
+  const skillitems = Array.from(skillItem).slice(0, skillItem.length);
+  skillitems.forEach(item =>{
+    item.style.background = lightMode.background;
+    item.style.color = lightMode.color;
+  });
+  footer.style.color = darkMode.color;
 })
 
 const statements = [
@@ -59,13 +72,15 @@ const statements = [
 
   function typeWriter(text, i, callback) {
     if (i < text.length) {
-      document.getElementById("welcome-statement").innerHTML += text.charAt(i);
+      const welcomeStatement =  document.getElementById("welcome-statement")
+      welcomeStatement.style.fontSize = "50px"
+      welcomeStatement.innerHTML += text.charAt(i);
       i++;
       setTimeout(function() {
         typeWriter(text, i, callback);
-      }, 50); // Adjust the typing speed by changing the timeout value
+      }, 50);
     } else {
-      setTimeout(callback, 1000); // Wait for 1 second before starting the next statement
+      setTimeout(callback, 1000); 
     }
   }
 
@@ -87,6 +102,41 @@ const statements = [
 
     nextStatement();
   }
-
-  // Start displaying the texts
   displayTexts();
+  
+  const plus = document.querySelectorAll(".fa-plus");
+  const x = document.querySelectorAll(".fa-x");
+  const journey = document.querySelectorAll(".journey");
+  
+  const plusArray = Array.from(plus).splice(0, plus.length);
+  const xArray = Array.from(x).splice(0, x.length);
+  const journeyArray = Array.from(journey).splice(0, journey.length);
+  
+  function show() {
+    const skillItems = document.querySelectorAll(".skill-item");
+  
+    skillItems.forEach(item => {
+      const journey = item.querySelector(".journey");
+      const x = item.querySelector(".fa-x");
+      const plus = item.querySelectorAll(".fa-plus");
+  
+      item.addEventListener("click", () => {
+        toggleDisplay(journey);
+        toggleDisplay(x);
+        togglePlus(plus);
+      });
+    });
+  
+    function togglePlus(elements) {
+      elements.forEach(element => {
+        element.style.display = (element.style.display === "flex" || element.style.display === "") ? "none" : "flex";
+      });
+    }
+  
+    function toggleDisplay(element) {
+      element.style.display = (element.style.display === "none" || element.style.display === "") ? "flex" : "none";
+    }
+  }
+  
+  show();
+  

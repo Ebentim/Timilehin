@@ -92,6 +92,7 @@ p{
   display: none;
 }
 .fa-plus{
+  display: flex;
 }
 
 footer{
@@ -138,4 +139,118 @@ input[type="submit"]{
   width: auto;
   max-width: 200px;
   padding: 0 50px;
+}
+@media only screen and (max-width: 768px) {
+  main{
+    width: 100vw;
+    margin: auto;
+  }
+  .about, .typewriter{
+    height: 60vh;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+  
+  }
+  .typewriter{
+    height: 75vh;
+  }
+  #welcome-statement {
+    white-space: wrap;
+    overflow: hidden;
+    font-size: 24px;
+    margin: 0;
+  }
+  .about h1{
+    margin-bottom: 5px;
+  }
+  p{
+    padding-right:5px;
+  }
+  .skill-list{
+    list-style: none;
+  }
+  .skill-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom right,  #333333, #444444);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    height: auto;
+    border-radius: 7px;
+  }
+  .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+  .journey{
+    margin: 0;
+    padding-bottom: 5px;
+    display:none ;
+    width: 90%;
+  }
+  .fa-x{
+    display: none;
+  }
+  .fa-plus{
+    display: flex;
+  }
+  footer{
+    background: linear-gradient(to top left, #333333, #444444);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer p{
+    padding: 0 5px;
+    border-left: 3px solid #07e1e9;
+    
+  }
+  footer > div{
+    padding-top: 10px;
+    width: 100%;
+    margin-left: 20px ;
+    margin-right: 20px ;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  form div{
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    width: 200px;
+    text-align: center;
+    border-radius: 3px;
+  }
+  form div > input {
+    width: 96%;
+    outline: none;
+    border: none;
+  }
+  textarea{
+    border: none;
+    outline: none;
+    resize: none;
+    width: 95%;
+  }
+  input[type="submit"]{
+    width: auto;
+    max-width: 200px;
+    padding: 0 50px;
+    background-color: #ffffff;
+    color: #000000;
+  }
 }
